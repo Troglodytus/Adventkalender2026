@@ -94,6 +94,11 @@
     calendar.replaceChildren();
 
     let count = 0;
+    const cabinet = el("div", "cabinet");
+    const shelves = [el("div", "shelf-row"), el("div", "shelf-row")];
+    shelves.forEach(shelf => cabinet.append(shelf));
+    calendar.append(cabinet);
+    const spineSizes = [[0.88,0.91],[1.16,0.99],[0.72,0.84],[1.05,0.94],[0.83,0.79],[1.32,1],[0.92,0.89],[1.14,0.96],[0.76,0.82],[1.2,0.92],[0.87,0.86],[1.08,0.97],[1.22,0.98],[0.81,0.86],[1.02,0.92],[0.74,0.78],[1.16,0.96],[0.87,0.88],[1.27,1],[0.75,0.85],[1.07,0.94],[0.91,0.82],[1.19,0.97],[0.99,0.9]];
 
     for (let day = 1; day <= 24; day++) {
       const open = isOpen(day);
@@ -101,7 +106,11 @@
 
       if (done) count++;
 
-      const button = el("button", `door book-${((day - 1) % 6) + 1}`);
+      const button = el("button", "door");
+      const [width, height] = spineSizes[day - 1];
+      button.style.setProperty("--spine-width", width);
+      button.style.setProperty("--spine-height", (height * 100) + "%");
+      button.style.setProperty("--spine-image", 'url("./assets/spines/' + pad(day) + '.svg")');
       button.type = "button";
       button.dataset.day = day;
       button.disabled = !open;
@@ -128,7 +137,7 @@
         openDay(day);
       });
 
-      calendar.append(button);
+      shelves[Math.floor((day - 1) / 12)].append(button);
     }
 
     if (restoreDay && !dialog.open) {
