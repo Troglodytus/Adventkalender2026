@@ -1,43 +1,102 @@
 <!doctype html>
 <html lang="de">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#18372f">
-<meta name="robots" content="noindex,nofollow">
-<title>Mendelkalender 2026</title>
-<link rel="stylesheet" href="./style.css">
-<script src="./raetsel.js" defer></script>
-<script src="./app.js" defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#18372f">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Mendelkalender 2026</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./raetsel.js" defer></script>
+  <script src="./app.js" defer></script>
 </head>
 <body>
-<main class="book">
-<header class="masthead">
-<div class="ornament" aria-hidden="true"><span></span><svg viewBox="0 0 64 44" width="64" height="44" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M32 10C24 3 13 3 5 6v29c10-3 19-2 27 5 8-7 17-8 27-5V6C51 3 40 3 32 10Zm0 0v30M10 12c6-2 12-1 17 2m-17 5c6-2 12-1 17 2m-17 5c6-2 12-1 17 2m10-14c5-3 11-4 17-2m-17 9c5-3 11-4 17-2m-17 9c5-3 11-4 17-2"/></svg><span></span></div>
-<p class="eyebrow">Stefan Zweig · Buchmendel · 1929</p>
-<h1>Mendelkalender <span>2026</span></h1>
-<p class="subtitle">Zwischen den Zeilen wartet ein Geheimnis.</p>
-<div class="edition"><span>WIEN</span><i></i><span>DEZEMBER MMXXVI</span></div>
-</header>
-<section aria-label="Adventkalender">
-<div class="calendar-heading"><h2>Mendels Register</h2><span id="count">0 / 24 gelöst</span></div>
-<div class="progress" role="progressbar" aria-label="Gelöste Rätsel" aria-valuemin="0" aria-valuemax="24" aria-valuenow="0"><span id="progress"></span></div>
-<div id="calendar" class="calendar"></div>
-<p id="calendar-note" class="calendar-note"></p>
-</section>
-<section id="register" class="register" hidden>
-<h2>Das Register der Fundstücke</h2><div id="fragments" class="fragments"></div><p id="finale" hidden></p>
-</section>
-<footer><span>Ex libris · Advent 2026</span><label id="dev-control" hidden><input id="dev-toggle" type="checkbox"> Developer-Modus</label><button id="reset" class="text-button" hidden>Testfortschritt löschen</button></footer>
-</main>
-<dialog id="day-dialog" aria-labelledby="day-title">
-<div class="dialog-inner"><button id="close" class="close" aria-label="Schließen">×</button>
-<p id="day-date" class="eyebrow"></p><h2 id="day-title"></h2><p id="day-page" class="page"></p>
-<div class="small-rule" aria-hidden="true">◆</div>
-<p id="day-prompt" class="prompt"></p>
-<form id="answer-form" novalidate><label id="answer-label" class="answer-label">Dein Lösungswort</label><div id="letters" class="letters" role="group" aria-labelledby="answer-label"></div><p class="entry-help">Groß- und Kleinschreibung spielen keine Rolle.</p><p id="feedback" class="feedback" role="status" aria-live="polite"></p></form>
-<section id="solution" class="solution" hidden><p class="eyebrow">Eintrag gefunden</p><p id="solution-word" class="solution-word"></p><p id="solution-text"></p><p id="solution-fragment" class="fragment-note" hidden></p></section>
-<button id="back" class="back">Zurück zum Register</button>
-</div></dialog>
-<noscript>Bitte aktiviere JavaScript, um die Rätsel zu öffnen.</noscript>
-</body></html>
+  <main class="book">
+    <header class="masthead">
+      <div class="ornament" aria-hidden="true">
+        <span></span>
+        <svg viewBox="0 0 64 44" width="64" height="44" fill="none" stroke="currentColor" stroke-width="1.3">
+          <path d="M32 10C24 3 13 3 5 6v29c10-3 19-2 27 5 8-7 17-8 27-5V6C51 3 40 3 32 10Zm0 0v30M10 12c6-2 12-1 17 2m-17 5c6-2 12-1 17 2m-17 5c6-2 12-1 17 2m10-14c5-3 11-4 17-2m-17 9c5-3 11-4 17-2m-17 9c5-3 11-4 17-2"/>
+        </svg>
+        <span></span>
+      </div>
+
+      <p class="eyebrow">Stefan Zweig · Buchmendel · 1929</p>
+      <h1>Mendelkalender <span>2026</span></h1>
+
+      <div class="edition">
+        <span>WIEN</span>
+        <i></i>
+        <span>DEZEMBER MMXXVI</span>
+      </div>
+    </header>
+
+    <section aria-label="Adventkalender">
+      <div class="calendar-heading">
+        <h2>Mendels Sammlung</h2>
+        <span id="count">0 / 24 gelöst</span>
+      </div>
+
+      <div class="progress"
+           role="progressbar"
+           aria-label="Gelöste Rätsel"
+           aria-valuemin="0"
+           aria-valuemax="24"
+           aria-valuenow="0">
+        <span id="progress"></span>
+      </div>
+
+      <div id="calendar" class="calendar"></div>
+      <p id="calendar-note" class="calendar-note"></p>
+    </section>
+
+    <section id="register" class="register" hidden>
+      <h2>Das Register der Fundstücke</h2>
+      <div id="fragments" class="fragments"></div>
+      <p id="finale" hidden></p>
+    </section>
+
+    <footer>
+      <span>Ex libris · Advent 2026</span>
+
+      <label id="dev-control" hidden>
+        <input id="dev-toggle" type="checkbox">
+        Developer-Modus
+      </label>
+
+      <button id="reset" class="text-button" hidden>Testfortschritt löschen</button>
+    </footer>
+  </main>
+
+  <dialog id="day-dialog" aria-labelledby="day-title">
+    <div class="dialog-inner">
+      <button id="close" class="close" aria-label="Schließen">×</button>
+
+      <p id="day-date" class="eyebrow"></p>
+      <h2 id="day-title"></h2>
+      <p id="day-page" class="page"></p>
+
+      <div id="day-media" class="day-media" hidden>
+        <img id="day-image" alt="">
+      </div>
+
+      <form id="answer-form" novalidate>
+        <label id="answer-label" class="answer-label">Fragment</label>
+        <div id="letters" class="letters" role="group" aria-labelledby="answer-label"></div>
+        <p id="feedback" class="feedback" role="status" aria-live="polite"></p>
+      </form>
+
+      <section id="solution" class="solution" hidden>
+        <p class="eyebrow">Eintrag gefunden</p>
+        <p id="solution-word" class="solution-word"></p>
+        <p id="solution-text"></p>
+        <p id="solution-fragment" class="fragment-note" hidden></p>
+      </section>
+
+      <button id="back" class="back">Zurück zur Bibliothek</button>
+    </div>
+  </dialog>
+
+  <noscript>Bitte aktiviere JavaScript, um die Rätsel zu öffnen.</noscript>
+</body>
+</html>
