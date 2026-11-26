@@ -698,3 +698,24 @@ dialog::backdrop{
 .cw-fragment.cw-revealed{background:#e2e9d9;border-color:#41654f}
 .cw-status{font:italic .84rem Georgia,serif;color:#756754;margin:10px 0}.cw-status.cw-done{color:#28503f;font-weight:bold}
 .cw-reset{border:1px solid #b89c68;background:#fff9eb;color:#665038;border-radius:2px;padding:8px 12px;font:.75rem system-ui,sans-serif;cursor:pointer}
+
+/* Keep multi-word answers visually separated, wrapping only between words. */
+.letters.word-groups{
+  column-gap:clamp(15px,4vw,25px);
+  row-gap:10px;
+}
+.letter-word{
+  display:grid;
+  grid-template-columns:repeat(var(--word-length),minmax(0,1fr));
+  gap:clamp(3px,1vw,6px);
+  width:calc(var(--word-length) * clamp(26px,7vw,44px) + (var(--word-length) - 1) * clamp(3px,1vw,6px));
+  max-width:100%;
+  min-width:0;
+}
+.letter-word .letter{
+  width:100%;
+  min-width:0;
+  padding:0;
+  height:clamp(36px,10vw,52px);
+  font-size:clamp(1rem,4.5vw,1.4rem);
+}

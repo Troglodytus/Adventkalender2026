@@ -236,7 +236,19 @@
               : window.MendelCrossword.mount($("crossword-puzzle"), puzzle.crossword, options);
     } else if (puzzle?.answer) {
       const answer = normalize(puzzle.answer);
+      const wordParts = String(puzzle.answer).trim().split(/\s+/).map(normalize).filter(Boolean);
+      const grouped = wordParts.length > 1 && wordParts.join("") === answer;
       const boxes = [];
+      const wordParents = [];
+      if (grouped) {
+        letters.classList.add("word-groups");
+        for (const word of wordParts) {
+          const group = el("div", "letter-word");
+          group.style.setProperty("--word-length", word.length);
+          letters.append(group);
+          for (let j = 0; j < word.length; j++) wordParents.push(group);
+        }
+      }
 
       function check() {
         const values = boxes.map((b) => b.value);
@@ -324,6 +336,10 @@
         });
 
         box.addEventListener("keydown", (e) => {
+          if (grouped && e.key === " ") {
+            e.preventDefault();
+            return;
+          }
           if (e.key === "ArrowLeft" && i > 0) {
             e.preventDefault();
             boxes[i - 1].focus();
@@ -348,7 +364,7 @@
         });
 
         boxes.push(box);
-        letters.append(box);
+        (wordParents[i] || letters).append(box);
       }
 
       if (solved(day)) {
