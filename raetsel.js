@@ -137,6 +137,13 @@ window.MENDEL = {
           1
         ]
       }
+    },
+    6: {
+      title: "Ein ungewöhnlicher Name",
+      page: "10",
+      answer: "EREN",
+      solution: "Ein Name aus einer anderen Welt.",
+      fragment: null
     }
 
     // Weitere Tage hier ergänzen.
