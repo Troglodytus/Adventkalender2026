@@ -151,6 +151,13 @@ window.MENDEL = {
       answer: "AUTISM",
       solution: "NEUE FREIE PRESSE",
       fragment: null
+    },
+    8: {
+      title: "Nur einer ist er schuldig…",
+      page: "12",
+      answer: "TODSÜNDEN",
+      solution: "TODSÜNDEN",
+      fragment: null
     }
 
     // Weitere Tage hier ergänzen.
