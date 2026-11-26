@@ -282,18 +282,11 @@ window.MENDEL = {
       fragment: null
     },
     14: {
-      title: "Finde Aldridge",
+      title: "Die chiffrierte Postkarte",
       page: "18",
-      answer: "ALDRIDGE",
-      solution: "ALDRIDGE",
-      fragment: null,
-      geography: {
-        latitude: 52.60542,
-        longitude: -1.91722,
-        radiusKm: 100,
-        hint: "Tipp: GeoWizard wohnt dort.",
-        targetLabel: "Aldridge"
-      }
+      answer: "HOLBORN SQ",
+      solution: "Die Chiffre ist entschlüsselt.",
+      fragment: null
     }
 
     // Weitere Tage hier ergänzen.
