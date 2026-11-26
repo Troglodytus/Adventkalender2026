@@ -28,6 +28,7 @@ body{
   color:var(--ink);
   font-family: Georgia, "Times New Roman", serif;
   background:
+    url("./assets/winter/snowflakes.svg") 0 0 / 390px 460px repeat,
     radial-gradient(ellipse at top, #3d6556 0%, #1e392f 55%, #152920 100%);
 }
 
@@ -526,4 +527,50 @@ dialog::backdrop{
     animation:none !important;
     transition:none !important;
   }
+}
+/* --- Advent: snowy walnut cabinet, illustrated in 2.5D --- */
+.calendar{
+  padding-top:39px;
+}
+.cabinet::before{
+  content:"";
+  position:absolute;
+  z-index:6;
+  pointer-events:none;
+  left:-4px;
+  right:-4px;
+  top:-13px;
+  height:30px;
+  background:url("./assets/winter/snow-cap.svg") center / 100% 100% no-repeat;
+  filter:drop-shadow(0 3px 2px #182a3480);
+}
+.cabinet::after{
+  content:"";
+  position:absolute;
+  z-index:7;
+  pointer-events:none;
+  top:-37px;
+  right:clamp(20px,7%,65px);
+  width:104px;
+  height:49px;
+  background:url("./assets/winter/ornaments.svg") center / contain no-repeat;
+  filter:drop-shadow(1px 3px 2px #2a24245c);
+}
+.shelf-row::before{
+  content:"";
+  position:absolute;
+  z-index:4;
+  pointer-events:none;
+  left:-5px;
+  right:-5px;
+  bottom:0;
+  height:18px;
+  background:url("./assets/winter/snow-shelf.svg") center / 100% 100% no-repeat;
+  filter:drop-shadow(0 2px 1.5px #1927338c);
+}
+.shelf-row:last-child::before{
+  transform:scaleX(-1);
+}
+@media (max-width:600px){
+  body{background-size:300px 355px,auto}
 }
