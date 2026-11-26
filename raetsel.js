@@ -148,8 +148,8 @@ window.MENDEL = {
     7: {
       title: "„Ich zeig dich an!“ – Mendel",
       page: "11",
-      answer: "AUTISM",
-      solution: "NEUE FREIE PRESSE",
+      answer: "NEUE FREIE PRESSE",
+      solution: "AUTISM",
       fragment: null
     },
     8: {
