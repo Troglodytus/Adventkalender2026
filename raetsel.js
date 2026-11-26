@@ -38,6 +38,18 @@ window.MENDEL = {
       answer: "SEDLEC",
       solution: "Sedlec – das Ossuarium ist erkannt.",
       fragment: null
+    },
+    3: {
+      title: "Die Partie der Professoren",
+      page: "7",
+      answer: "G3",
+      solution: "Die Zugfolge ist gefunden.",
+      fragment: null,
+      chess: {
+        fen: "r5k1/pR3pbp/2p2np1/3p4/P1PP4/B3rp2/3N1P2/1R1QKN1q w - - 0 1",
+        line: ["f2e3","h1h4","f1g3","h4g3"],
+        player: "b"
+      }
     }
 
     // Weitere Tage hier ergänzen.

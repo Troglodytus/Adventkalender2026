@@ -574,3 +574,26 @@ dialog::backdrop{
 @media (max-width:600px){
   body{background-size:300px 355px,auto}
 }
+
+/* Schachbrett: Holzrahmen, Elfenbein und dunkle Holzfiguren */
+#chess-puzzle{margin:12px auto 4px;max-width:390px}
+.chess-board{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));border:clamp(5px,1.8vw,10px) solid #684329;border-radius:3px;box-shadow:0 3px 8px #3d251d55,0 0 0 1px #b89b69;background:#684329;overflow:hidden}
+.chess-square{position:relative;display:grid;place-items:center;aspect-ratio:1;border:0;border-radius:0;padding:0;min-width:0;cursor:pointer;touch-action:manipulation;user-select:none;-webkit-tap-highlight-color:transparent}
+.chess-square.light{background:#e8d5ad}.chess-square.dark{background:#987754}
+.chess-square.last{box-shadow:inset 0 0 0 3px #be9d4c99}
+.chess-square.selected{background:#c9ae61}
+.chess-square.in-check{box-shadow:inset 0 0 0 3px #a14039}
+.chess-square.target::after{content:"";width:21%;aspect-ratio:1;border-radius:50%;background:#264c3890;position:absolute;pointer-events:none}
+.chess-square.capture::after{width:85%;background:transparent;border:3px solid #264c3890}
+.chess-square:focus-visible{outline:2px solid #31563f;outline-offset:-3px;z-index:1}
+.chess-piece{font-family:"DejaVu Sans","Segoe UI Symbol","Arial Unicode MS",serif;font-size:clamp(23px,8vw,43px);line-height:1;pointer-events:none}
+.white-piece{color:#fff3d4;-webkit-text-stroke:.65px #493726;text-shadow:0 1px 2px #40271c77}
+.black-piece{color:#35241b;-webkit-text-stroke:.35px #18110d;text-shadow:0 1px 1px #f7e3b766}
+.chess-rank,.chess-file{position:absolute;font:600 9px Georgia,serif;color:#402d1e;pointer-events:none}
+.chess-rank{left:2px;top:2px}.chess-file{right:2px;bottom:1px}
+.chess-square.dark .chess-rank,.chess-square.dark .chess-file{color:#fff2d6}
+.chess-status{min-height:1.35em;font:italic .92rem Georgia,serif;color:#344a3c;margin:8px 0 11px}
+.chess-status.wrong{color:#8a3835}.chess-status.done{color:#28503f;font-weight:bold}
+.chess-moves{min-height:1.2em;margin:10px 0 7px;font: .75rem system-ui,sans-serif;color:#756754;white-space:pre-wrap}
+.chess-restart{border:1px solid #b89c68;background:#fff9eb;color:#665038;border-radius:2px;padding:7px 10px;font: .7rem system-ui,sans-serif;cursor:pointer}
+.chess-promotion{display:flex;flex-wrap:wrap;justify-content:center;gap:4px;margin:6px 0}

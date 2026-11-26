@@ -39,6 +39,7 @@
   let dev = Boolean(config.developerEnabled);
   let active = null;
   let lastButton = null;
+  let stopChess = null;
 
   const fallbackMemory = {};
 
@@ -193,7 +194,9 @@
       mediaWrap.hidden = true;
     }
 
-    $("answer-form").hidden = !puzzle?.answer;
+    if (stopChess) { stopChess(); stopChess = null; }
+    $("chess-puzzle").hidden = !puzzle?.chess;
+    $("answer-form").hidden = !puzzle?.answer || !!puzzle?.chess;
     $("solution").hidden = true;
     $("solution-fragment").hidden = true;
     $("feedback").textContent = "";
@@ -202,7 +205,22 @@
     letters.className = "letters";
     letters.replaceChildren();
 
-    if (puzzle?.answer) {
+    if (puzzle?.chess) {
+      stopChess = window.MendelChess.mount($("chess-puzzle"), puzzle.chess, {
+        completed: solved(day),
+        onSolved: () => {
+          if (active !== day) return;
+          progress[day] = normalize(puzzle.answer);
+          saveProgress();
+          $("solution-word").textContent = puzzle.answer;
+          $("solution-text").textContent = puzzle.solution;
+          $("solution-fragment").hidden = !puzzle.fragment;
+          $("solution-fragment").textContent = puzzle.fragment ? "Fundstück: " + puzzle.fragment : "";
+          $("solution").hidden = false;
+          render();
+        }
+      });
+    } else if (puzzle?.answer) {
       const answer = normalize(puzzle.answer);
       const boxes = [];
 
@@ -342,6 +360,7 @@
   });
 
   dialog.addEventListener("close", () => {
+    if (stopChess) { stopChess(); stopChess = null; }
     const button = calendar.querySelector(`[data-day="${active}"]`) || lastButton;
     button?.focus();
     active = null;
