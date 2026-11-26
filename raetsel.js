@@ -13,7 +13,7 @@ window.MENDEL = {
     subtitle: "Eine Erzählung",
     illustrations: "–",
     loans: [
-      { reader: "3", group: "I", due: "30.11.1929" },
+      { reader: "BN117", group: "III", due: "30.11.1929" },
       { reader: "0403", group: "II", due: "30.11.2026" },
       { reader: "0304", group: "III", due: "24.12.2026" }
     ]
@@ -446,9 +446,9 @@ window.MENDEL = {
             "body": [
               "Auf diskretem Wege ersuche ich Sie um die Beschaffung jener Sherlock-Holmes-Romane, deren Besitz mir dieser Tage nicht gestattet ist. Insbesondere interessieren mich die folgenden vier Titel:"
             ],
-            "closingBody": "Eines dieser Werke steht bei mir über allen anderen. Welche Stelle es in meiner Aufzählung einnimmt, mag Ihnen meine alte Entlehnungskarte verraten. Meinen Namen bitte ich nicht zu nennen.",
+            "closingBody": "Eines dieser Werke steht bei mir über allen anderen. Da Sie ja wissen, wie sehr ich an meine Lesergruppe gebunden bin, brauche ich Ihnen wohl nicht eigens zu sagen, welches ich meine. Meinen Namen bitte ich nicht zu nennen.",
             "closing": "In aller Verschwiegenheit",
-            "signature": "BN 3",
+            "signature": "BN117",
             "role": ""
           }
         ],
