@@ -179,6 +179,93 @@ window.MENDEL = {
       answer: "4348",
       solution: "MENDEL",
       fragment: null
+    },
+    11: {
+      title: "Die verlorenen Spuren",
+      page: "15",
+      answer: "SPUREN",
+      solution: "Nicht jede Spur verweht.",
+      fragment: null,
+      crossword: {
+        "width": 9,
+        "height": 14,
+        "words": [
+          {
+            "number": 1,
+            "dir": "down",
+            "x": 5,
+            "y": 0,
+            "answer": "SCHOKOLADEFRAU",
+            "clue": "Sporschil vulgo …?"
+          },
+          {
+            "number": 2,
+            "dir": "down",
+            "x": 8,
+            "y": 0,
+            "answer": "FLORIANIGASSE",
+            "clue": "In welcher Gasse befindet sich das Kurzwarengeschäft?"
+          },
+          {
+            "number": 3,
+            "dir": "across",
+            "x": 0,
+            "y": 1,
+            "answer": "SPORSCHIL",
+            "clue": "Wer erinnert sich letztendlich an Mendel?"
+          },
+          {
+            "number": 3,
+            "dir": "down",
+            "x": 0,
+            "y": 1,
+            "answer": "STANDHARTNER",
+            "clue": "Wie hieß der ehemalige Besitzer des Cafés?"
+          },
+          {
+            "number": 4,
+            "dir": "across",
+            "x": 2,
+            "y": 8,
+            "answer": "MANDL",
+            "clue": "Mit wem verwechselt der Oberkellner Mendel?"
+          },
+          {
+            "number": 5,
+            "dir": "across",
+            "x": 4,
+            "y": 11,
+            "answer": "KREMS",
+            "clue": "In der Nähe welcher Stadt lebt der ehemalige Oberkellner?"
+          }
+        ],
+        "extract": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            5,
+            13
+          ],
+          [
+            8,
+            3
+          ],
+          [
+            6,
+            11
+          ],
+          [
+            4,
+            8
+          ]
+        ]
+      }
     }
 
     // Weitere Tage hier ergänzen.

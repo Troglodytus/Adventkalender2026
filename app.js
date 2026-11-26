@@ -199,7 +199,8 @@
     $("magnet-puzzle").hidden = !puzzle?.magnet;
     $("catalog-puzzle").hidden = !puzzle?.catalog;
     $("geography-puzzle").hidden = !puzzle?.geography;
-    $("answer-form").hidden = !puzzle?.answer || !!puzzle?.chess || !!puzzle?.magnet || !!puzzle?.catalog || !!puzzle?.geography;
+    $("crossword-puzzle").hidden = !puzzle?.crossword;
+    $("answer-form").hidden = !puzzle?.answer || !!puzzle?.chess || !!puzzle?.magnet || !!puzzle?.catalog || !!puzzle?.geography || !!puzzle?.crossword;
     $("solution").hidden = true;
     $("solution-fragment").hidden = true;
     $("feedback").textContent = "";
@@ -208,14 +209,14 @@
     letters.className = "letters";
     letters.replaceChildren();
 
-    if (puzzle?.chess || puzzle?.magnet || puzzle?.catalog || puzzle?.geography) {
+    if (puzzle?.chess || puzzle?.magnet || puzzle?.catalog || puzzle?.geography || puzzle?.crossword) {
       const options = {
         completed: solved(day),
         onSolved: () => {
           if (active !== day) return;
           progress[day] = normalize(puzzle.answer);
           saveProgress();
-          if (puzzle.magnet || puzzle.catalog || puzzle.geography) { render(); return; }
+          if (puzzle.magnet || puzzle.catalog || puzzle.geography || puzzle.crossword) { render(); return; }
           $("solution-word").textContent = puzzle.answer;
           $("solution-text").textContent = puzzle.solution;
           $("solution-fragment").hidden = !puzzle.fragment;
@@ -230,7 +231,9 @@
           ? window.MendelMagnet.mount($("magnet-puzzle"), options)
           : puzzle.catalog
             ? window.MendelCatalog.mount($("catalog-puzzle"), puzzle.catalog, options)
-            : window.MendelGeography.mount($("geography-puzzle"), puzzle.geography, options);
+            : puzzle.geography
+              ? window.MendelGeography.mount($("geography-puzzle"), puzzle.geography, options)
+              : window.MendelCrossword.mount($("crossword-puzzle"), puzzle.crossword, options);
     } else if (puzzle?.answer) {
       const answer = normalize(puzzle.answer);
       const boxes = [];

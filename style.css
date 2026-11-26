@@ -668,3 +668,33 @@ dialog::backdrop{
 .geo-lock:not(:disabled):hover{background:#e8d6ac}
 .geo-status{min-height:1.2em;margin:8px 0;color:#625744;font:italic .85rem Georgia,serif}
 .geo-source{margin:2px 0;font:.6rem system-ui,sans-serif;color:#86775e}
+
+/* Kreuzworträtsel */
+#crossword-puzzle{margin:12px auto 4px;max-width:460px}
+.cw-hint{margin:8px 0 15px;color:#625744;font:italic .9rem/1.4 Georgia,serif}
+.cw-grid{display:grid;gap:2px;max-width:326px;margin:0 auto 18px}
+.cw-cell,.cw-blank{aspect-ratio:1;min-width:0;position:relative}
+.cw-cell{border:1px solid #bba47b;background:#fffaef;border-radius:1px}
+.cw-marked{background:#e8d2a0}
+.cw-cell.cw-active{border-color:#a1844d;box-shadow:inset 0 0 0 1px #b89c6870}
+.cw-cell.cw-good{border-color:#41654f;box-shadow:0 0 4px #41654f55;background:#e2e9d9}
+.cw-cell.cw-good.cw-marked{background:#d8dfb5}
+.cw-cell.cw-wrong{border-color:#a04a42;box-shadow:0 0 4px #a04a4260}
+.cw-input{box-sizing:border-box;position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:0;background:transparent;text-align:center;padding:3px 0 0;color:#18372f;font:600 clamp(14px,4.2vw,20px)/1 Georgia,serif;text-transform:uppercase;outline:none}
+.cw-input:focus{box-shadow:inset 0 0 0 2px #a1844d;background:#c4a45716}
+.cw-clue-number,.cw-mark-number{position:absolute;font:600 8px/1 system-ui,sans-serif;pointer-events:none;z-index:1}
+.cw-clue-number{top:2px;left:2px;color:#756754}.cw-mark-number{bottom:2px;right:2px;color:#876528}
+.cw-clues{text-align:left;display:grid;gap:14px}
+.cw-clue-group{display:grid;gap:4px}
+.cw-clue-heading{margin:0 0 3px;color:#81673e;font:600 .72rem system-ui,sans-serif;text-transform:uppercase;letter-spacing:.12em}
+.cw-clue{border:1px solid transparent;text-align:left;background:transparent;border-radius:2px;padding:6px;color:#514636;font:.85rem/1.35 Georgia,serif;cursor:pointer}
+.cw-clue.cw-selected{border-color:#c9b78f;background:#f0e2c4}
+.cw-clue.cw-solved{color:#41654f;background:#e2e9d9}.cw-clue.cw-solved:after{content:" ✓"}
+.cw-result{border-top:1px solid #c9b78f;margin-top:16px;padding-top:12px}
+.cw-label{color:#756754;font:.68rem system-ui,sans-serif;letter-spacing:.13em;text-transform:uppercase;margin:0 0 9px}
+.cw-strip{display:grid;grid-template-columns:repeat(6,minmax(0,40px));justify-content:center;gap:5px}
+.cw-fragment{aspect-ratio:4/5;border:1px solid #bba47b;border-radius:2px;background:#fff9ed;display:flex;flex-direction:column;justify-content:center;align-items:center;color:#28503f}
+.cw-frag-index{font:.6rem system-ui,sans-serif;color:#876528}.cw-frag-letter{font:1.3rem Georgia,serif;min-height:1.35em}
+.cw-fragment.cw-revealed{background:#e2e9d9;border-color:#41654f}
+.cw-status{font:italic .84rem Georgia,serif;color:#756754;margin:10px 0}.cw-status.cw-done{color:#28503f;font-weight:bold}
+.cw-reset{border:1px solid #b89c68;background:#fff9eb;color:#665038;border-radius:2px;padding:8px 12px;font:.75rem system-ui,sans-serif;cursor:pointer}
