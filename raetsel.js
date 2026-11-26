@@ -50,6 +50,14 @@ window.MENDEL = {
         line: ["f2e3","h1h4","f1g3","h4g3"],
         player: "b"
       }
+    },
+    4: {
+      title: "Das Magnetkabinett",
+      page: "8",
+      answer: "MESMER",
+      solution: "Die Nadeln haben das Geheimnis des Magnetiseurs enthüllt.",
+      fragment: null,
+      magnet: true
     }
 
     // Weitere Tage hier ergänzen.

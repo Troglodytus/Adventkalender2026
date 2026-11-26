@@ -597,3 +597,17 @@ dialog::backdrop{
 .chess-moves{min-height:1.2em;margin:10px 0 7px;font: .75rem system-ui,sans-serif;color:#756754;white-space:pre-wrap}
 .chess-restart{border:1px solid #b89c68;background:#fff9eb;color:#665038;border-radius:2px;padding:7px 10px;font: .7rem system-ui,sans-serif;cursor:pointer}
 .chess-promotion{display:flex;flex-wrap:wrap;justify-content:center;gap:4px;margin:6px 0}
+
+/* Magnetkabinett */
+#magnet-puzzle{max-width:430px;margin:12px auto 4px}
+.magnet-hint{margin:8px 0 12px;color:#625744;font:italic .92rem Georgia,serif}
+.magnet-chart{width:100%;height:auto;display:block;border:1px solid #a68b58;border-radius:4px;box-shadow:0 3px 9px #62492c26}
+.magnet-controls{display:grid;gap:8px;margin:15px 0}
+.magnet-control{display:grid;grid-template-columns:58px minmax(0,1fr) 44px;align-items:center;gap:8px;text-align:left;color:#68553a;font:.72rem system-ui,sans-serif}
+.magnet-control input{width:100%;min-width:0;accent-color:#315746;cursor:pointer}
+.magnet-control output{text-align:right;font-variant-numeric:tabular-nums}
+.magnet-letters{display:flex;justify-content:center;gap:5px}
+.magnet-letter{width:clamp(28px,9vw,42px);height:clamp(34px,10vw,46px);display:grid;place-items:center;background:#fff9ed;color:#294536;border:1px solid #b49a6c;border-radius:2px;box-shadow:0 2px 4px #62492c20;font:1.35rem Georgia,serif}
+.magnet-letters.complete .magnet-letter{border-color:#35644f;background:#edf3e6;box-shadow:0 0 8px #24583e66}
+.magnet-status{font:italic .82rem Georgia,serif;color:#756754;min-height:1.2em;margin:10px 0}
+.magnet-status.complete{color:#28503f;font-weight:bold}
