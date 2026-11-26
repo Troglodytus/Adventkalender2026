@@ -611,3 +611,41 @@ dialog::backdrop{
 .magnet-letters.complete .magnet-letter{border-color:#35644f;background:#edf3e6;box-shadow:0 0 8px #24583e66}
 .magnet-status{font:italic .82rem Georgia,serif;color:#756754;min-height:1.2em;margin:10px 0}
 .magnet-status.complete{color:#28503f;font-weight:bold}
+
+/* Mendels Antiquariatskatalog */
+#catalog-puzzle{max-width:470px;margin:12px auto 4px}
+.catalog-hint{margin:8px 0 18px;font:italic .94rem Georgia,serif;color:#756754}
+.catalog-progress-head{display:flex;justify-content:space-between;align-items:center;font:.64rem system-ui,sans-serif;color:#756754;margin-bottom:6px;letter-spacing:.07em;text-transform:uppercase}
+.catalog-progress{height:3px;background:#d9cbb0;overflow:hidden;margin-bottom:15px}
+.catalog-progress span{display:block;height:100%;width:0;background:#315746;transition:width .2s ease}
+.catalog-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px 10px;align-items:stretch}
+.catalog-column-title{font:600 .65rem system-ui,sans-serif;color:#927445;text-transform:uppercase;letter-spacing:.13em;margin:0 0 1px}
+.catalog-card{font:inherit;min-width:0;min-height:77px;border:1px solid #bba47b;border-radius:3px;box-shadow:0 2px 3px #62492c13;cursor:pointer;color:#403b2c;transition:background .15s,box-shadow .15s,border-color .15s;position:relative;padding:8px;overflow-wrap:anywhere;-webkit-tap-highlight-color:transparent}
+.catalog-book{display:flex;text-align:left;align-items:center;gap:8px;background:#fff9ed}
+.catalog-book-icon{width:23px;flex:0 0 23px}.catalog-book-icon svg{display:block;width:100%;height:auto}
+.catalog-book-details{display:flex;flex-direction:column;gap:4px;min-width:0}
+.catalog-book-title{font:italic .85rem/1.26 Georgia,serif}
+.catalog-year{font:.66rem system-ui,sans-serif;color:#86734f}
+.catalog-author{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;background:#efe3c8;text-align:center}
+.catalog-author-name{font:.87rem/1.3 Georgia,serif}
+.catalog-check{font:600 .9rem system-ui,sans-serif;color:#41654f;line-height:1}
+.catalog-card:not(:disabled):hover{border-color:#9c7943;box-shadow:0 2px 7px #62492c33}
+.catalog-card:focus-visible{outline:2px solid #9c7943;outline-offset:2px}
+.catalog-card.selected{background:#f2e0b4;border-color:#a1844d;box-shadow:inset 0 0 0 1px #a1844d}
+.catalog-card.wrong{border-color:#a04a42;box-shadow:0 0 6px #a04a4260}
+.catalog-card.matched{background:#e2e9d9;border-color:#41654f;cursor:default;opacity:1;color:#31493b}
+.catalog-feedback{min-height:1.2em;margin:9px 0;color:#98443b;font:.76rem system-ui,sans-serif}
+.catalog-result{padding-top:12px;border-top:1px solid #c9b78f}
+.catalog-fragment-label{margin:0 0 9px;font:.68rem system-ui,sans-serif;letter-spacing:.13em;color:#756754;text-transform:uppercase}
+.catalog-letters{display:grid;grid-template-columns:repeat(8,minmax(0,37px));justify-content:center;gap:4px}
+.catalog-letter{aspect-ratio:3/4;display:grid;place-items:center;background:#fff9ed;border:1px solid #bba47b;border-radius:2px;color:#28503f;font:1.2rem Georgia,serif}
+.catalog-letter.matched{background:#e2e9d9;border-color:#41654f;box-shadow:0 0 5px #41654f30}
+.catalog-completion{min-height:1.2em;margin:10px 0;color:#28503f;font:600 .85rem Georgia,serif}
+.catalog-reset{border:1px solid #b89c68;background:#fff9eb;color:#665038;border-radius:2px;padding:8px 12px;font:.75rem system-ui,sans-serif;cursor:pointer}
+@media(max-width:480px){
+ .catalog-grid{gap:6px}
+ .catalog-card{padding:7px 5px;min-height:81px}
+ .catalog-book{gap:5px}
+ .catalog-book-icon{width:17px;flex-basis:17px}
+ .catalog-book-title,.catalog-author-name{font-size:.77rem}
+}

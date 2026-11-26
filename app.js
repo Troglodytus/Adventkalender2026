@@ -197,7 +197,8 @@
     if (stopInteractive) { stopInteractive(); stopInteractive = null; }
     $("chess-puzzle").hidden = !puzzle?.chess;
     $("magnet-puzzle").hidden = !puzzle?.magnet;
-    $("answer-form").hidden = !puzzle?.answer || !!puzzle?.chess || !!puzzle?.magnet;
+    $("catalog-puzzle").hidden = !puzzle?.catalog;
+    $("answer-form").hidden = !puzzle?.answer || !!puzzle?.chess || !!puzzle?.magnet || !!puzzle?.catalog;
     $("solution").hidden = true;
     $("solution-fragment").hidden = true;
     $("feedback").textContent = "";
@@ -206,14 +207,14 @@
     letters.className = "letters";
     letters.replaceChildren();
 
-    if (puzzle?.chess || puzzle?.magnet) {
+    if (puzzle?.chess || puzzle?.magnet || puzzle?.catalog) {
       const options = {
         completed: solved(day),
         onSolved: () => {
           if (active !== day) return;
           progress[day] = normalize(puzzle.answer);
           saveProgress();
-          if (puzzle.magnet) { render(); return; }
+          if (puzzle.magnet || puzzle.catalog) { render(); return; }
           $("solution-word").textContent = puzzle.answer;
           $("solution-text").textContent = puzzle.solution;
           $("solution-fragment").hidden = !puzzle.fragment;
@@ -224,7 +225,9 @@
       };
       stopInteractive = puzzle.chess
         ? window.MendelChess.mount($("chess-puzzle"), puzzle.chess, options)
-        : window.MendelMagnet.mount($("magnet-puzzle"), options);
+        : puzzle.magnet
+          ? window.MendelMagnet.mount($("magnet-puzzle"), options)
+          : window.MendelCatalog.mount($("catalog-puzzle"), puzzle.catalog, options);
     } else if (puzzle?.answer) {
       const answer = normalize(puzzle.answer);
       const boxes = [];

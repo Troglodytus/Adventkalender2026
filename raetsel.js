@@ -58,6 +58,85 @@ window.MENDEL = {
       solution: "Die Nadeln haben das Geheimnis des Magnetiseurs enthüllt.",
       fragment: null,
       magnet: true
+    },
+    5: {
+      title: "Mendels Antiquariatskatalog",
+      page: "9",
+      answer: "ANTIQUAR",
+      solution: "Der Katalog ist vollständig.",
+      fragment: null,
+      catalog: {
+        "books": [
+          {
+            "title": "Malleus Maleficarum",
+            "year": 1487,
+            "author": 0,
+            "letter": "A"
+          },
+          {
+            "title": "Nützlicher Unterricht wider den Teufel zu streiten",
+            "year": 1774,
+            "author": 1,
+            "letter": "N"
+          },
+          {
+            "title": "Rapport des commissaires… du magnétisme animal",
+            "year": 1784,
+            "author": 2,
+            "letter": "T"
+          },
+          {
+            "title": "Recherches… sur le somnambulisme naturel",
+            "year": 1811,
+            "author": 3,
+            "letter": "I"
+          },
+          {
+            "title": "Neurypnology",
+            "year": 1843,
+            "author": 4,
+            "letter": "Q"
+          },
+          {
+            "title": "A Treatise on Electricity and Magnetism",
+            "year": 1873,
+            "author": 5,
+            "letter": "U"
+          },
+          {
+            "title": "Science and Health",
+            "year": 1875,
+            "author": 6,
+            "letter": "A"
+          },
+          {
+            "title": "Isis Unveiled",
+            "year": 1877,
+            "author": 7,
+            "letter": "R"
+          }
+        ],
+        "authors": [
+          "Heinrich Kramer",
+          "Johann Joseph Gaßner",
+          "Jean-Sylvain Bailly u. a.",
+          "Marquis de Puységur",
+          "James Braid",
+          "James Clerk Maxwell",
+          "Mary Baker Eddy",
+          "Helena P. Blavatsky"
+        ],
+        "order": [
+          5,
+          3,
+          7,
+          0,
+          6,
+          2,
+          4,
+          1
+        ]
+      }
     }
 
     // Weitere Tage hier ergänzen.
