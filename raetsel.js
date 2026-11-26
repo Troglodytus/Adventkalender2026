@@ -144,6 +144,13 @@ window.MENDEL = {
       answer: "EREN",
       solution: "Ein Name aus einer anderen Welt.",
       fragment: null
+    },
+    7: {
+      title: "„Ich zeig dich an!“ – Mendel",
+      page: "11",
+      answer: "AUTISM",
+      solution: "NEUE FREIE PRESSE",
+      fragment: null
     }
 
     // Weitere Tage hier ergänzen.
