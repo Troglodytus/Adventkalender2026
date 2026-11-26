@@ -170,6 +170,15 @@ window.MENDEL = {
         longitude: -74.65682,
         radiusKm: 100
       }
+    },
+    10: {
+      title: "Eine Welt über unserer Welt",
+      page: "14",
+      image: "./assets/day10-brille.svg",
+      imageAlt: "Antike Brille mit winzigen Lettern. Non omnia oculis patent.",
+      answer: "4348",
+      solution: "MENDEL",
+      fragment: null
     }
 
     // Weitere Tage hier ergänzen.
