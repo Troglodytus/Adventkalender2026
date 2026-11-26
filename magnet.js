@@ -64,7 +64,7 @@ function mount(root, options){
  const status=node("p","magnet-status");status.setAttribute("role","status");status.setAttribute("aria-live","polite");
  const reset=node("button","chess-restart","Neu beginnen");reset.type="button";
  root.append(hint,chart,controls,letters,status,reset);
- let completed=false;
+ let completed=Boolean(options.completed);
  function paint(){
    const x=Number(pos.input.value),r=Number(rot.input.value);
    pos.out.textContent=Math.round((x-115)/130*100)+" %";rot.out.textContent=r+"°";
@@ -76,14 +76,13 @@ function mount(root, options){
     ringTexts[i].forEach((t,k)=>{t.setAttribute("fill",k===j?"#244c38":"#594a34");t.setAttribute("font-weight",k===j?"bold":"normal");t.setAttribute("font-size",k===j?"11":"9");});
     boxes[i].textContent=state.word[i];
    });
-   letters.classList.toggle("complete",state.success);
-   status.textContent=state.success?"Das Geheimnis ist entschlüsselt.":"Lies die roten Nadelspitzen von links nach rechts.";
-   status.classList.toggle("complete",state.success);
-   if(state.success&&!completed){completed=true;pos.input.disabled=true;rot.input.disabled=true;options.onSolved();}
+   const correct = state.word === model.target;
+   letters.classList.toggle("complete",correct);
+   status.textContent="Lies die roten Nadelspitzen von links nach rechts.";
+   if(correct&&!completed){completed=true;options.onSolved();}
  }
  pos.input.addEventListener("input",paint);rot.input.addEventListener("input",paint);
- reset.addEventListener("click",()=>{completed=false;pos.input.disabled=false;rot.input.disabled=false;pos.input.value=135;rot.input.value=-65;paint();});
- if(options.completed){pos.input.value=180;rot.input.value=0;}
+ reset.addEventListener("click",()=>{pos.input.value=135;rot.input.value=-65;paint();});
  paint();
  return ()=>root.replaceChildren();
 }

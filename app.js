@@ -213,6 +213,7 @@
           if (active !== day) return;
           progress[day] = normalize(puzzle.answer);
           saveProgress();
+          if (puzzle.magnet) { render(); return; }
           $("solution-word").textContent = puzzle.answer;
           $("solution-text").textContent = puzzle.solution;
           $("solution-fragment").hidden = !puzzle.fragment;
