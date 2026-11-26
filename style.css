@@ -719,3 +719,45 @@ dialog::backdrop{
   height:clamp(36px,10vw,52px);
   font-size:clamp(1rem,4.5vw,1.4rem);
 }
+
+/* K. u. k. Verhörprotokoll – Tag 15 */
+#protocol-puzzle{margin:12px auto 4px;max-width:510px}
+.pr-sheet{position:relative;text-align:left;padding:clamp(10px,3vw,23px);background:repeating-linear-gradient(0deg,#856a3410 0px,transparent 1px,transparent 5px),linear-gradient(115deg,#f5edd8,#eee2c5);border:1px solid #b69a64;box-shadow:0 3px 12px #62492c26;color:#403b2c;transition:box-shadow .2s}
+.pr-header{position:relative;text-align:center;border-bottom:3px double #b29b70;padding:10px 0 16px}
+.pr-authority{font:.68rem/1.5 Georgia,serif;letter-spacing:.13em;margin:0 0 8px;color:#756754}
+.pr-title{font:700 clamp(1.45rem,6vw,2rem)/1.2 Georgia,serif;margin:0;color:#403b2c}
+.pr-subtitle{font:.65rem/1.4 "Courier New",monospace;margin:7px 0 0}
+.pr-stamp{display:inline-block;margin:13px auto 0;padding:4px 12px;border:3px double #963d34;color:#963d34;font:bold .8rem/1.3 "Courier New",monospace;letter-spacing:.14em;transform:rotate(-9deg);opacity:.83}
+.pr-instruction{font:italic .82rem/1.45 Georgia,serif;margin:13px 0 18px;color:#625744}
+.pr-block{margin:16px 0 20px}
+.pr-heading{margin:0 0 8px;padding:0 0 5px;border-bottom:1px solid #b29b70;color:#675234;font:700 .78rem/1.4 Georgia,serif;letter-spacing:.025em}
+.pr-table{border:1px solid #c7b28a}
+.pr-table-head,.pr-line{display:grid;grid-template-columns:minmax(0,1fr) clamp(45px,13vw,60px) clamp(45px,13vw,60px)}
+.pr-table-head{background:#e5d6b2;border-bottom:1px solid #bca577;font:700 .66rem/1.4 Georgia,serif}
+.pr-table-head span{padding:7px 3px;text-align:center}
+.pr-table-head span:first-child{text-align:left;padding-left:9px}
+.pr-line{border-bottom:1px solid #c7b28a;min-height:53px}
+.pr-line:last-child{border-bottom:0}
+.pr-entry{padding:8px;display:flex;flex-direction:column;justify-content:center;gap:3px;overflow-wrap:anywhere}
+.pr-label{font:.67rem/1.3 Georgia,serif;color:#756754}
+.pr-value{font:700 .82rem/1.3 "Courier New",monospace;color:#403b2c}
+.pr-choice{position:relative;display:grid;place-items:center;min-height:44px;border-left:1px solid #c7b28a;cursor:pointer;background:#fff9ed22}
+.pr-radio{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:pointer}
+.pr-mark{display:grid;place-items:center;width:22px;height:22px;border:1px solid #a48d62;border-radius:2px;color:#435c82;font:700 19px/1 Georgia,serif;background:#fff9ed99;pointer-events:none}
+.pr-radio:checked+.pr-mark{border-color:#435c82;background:#dce1dd}
+.pr-radio:checked+.pr-mark:after{content:"×"}
+.pr-radio:focus-visible+.pr-mark{outline:2px solid #435c82;outline-offset:3px}
+.pr-radio:disabled{cursor:default}
+.pr-line.pr-answered .pr-entry{background:#fffaf12a}
+.pr-footer{text-align:center;border-top:3px double #b29b70;padding-top:12px}
+.pr-count{font:.72rem/1.5 "Courier New",monospace;color:#756754;margin:0 0 10px}
+.pr-submit,.pr-reset{font:700 .76rem/1.4 Georgia,serif;border:1px solid #a99060;border-radius:2px;background:#f8ecd0;color:#403b2c;padding:10px 16px;cursor:pointer}
+.pr-submit:disabled{opacity:.5;cursor:default}
+.pr-reset{font-weight:400;padding:6px 12px;margin-top:8px;background:transparent}
+.pr-feedback{min-height:1em;font:italic .83rem/1.4 Georgia,serif;color:#963d34}
+.pr-sheet.pr-incorrect{box-shadow:0 0 14px #963d3466}
+.pr-sheet.pr-correct{box-shadow:0 0 14px #41654f66}
+.pr-correct .pr-feedback{color:#315746}
+.pr-fragment{border:1px solid #41654f;background:#e2e9d9;padding:12px;display:grid;gap:4px;color:#28503f;margin-top:10px}
+.pr-fragment-label{font:.65rem/1.4 Georgia,serif;letter-spacing:.14em}
+.pr-fragment strong{font:700 1.65rem/1.3 Georgia,serif;letter-spacing:.15em}

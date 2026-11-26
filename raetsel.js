@@ -287,6 +287,125 @@ window.MENDEL = {
       answer: "HOLBORN SQ",
       solution: "Die Chiffre ist entschlüsselt.",
       fragment: null
+    },
+    15: {
+      title: "Die Akte Jakob Mendel",
+      page: "19",
+      answer: "IRRTUM",
+      solution: "IRRTUM",
+      fragment: null,
+      protocol: [
+        {
+          "heading": "I. Personalien",
+          "rows": [
+            [
+              "Datum",
+              "Ende 1915",
+              true
+            ],
+            [
+              "Name",
+              "Jakob Mendel",
+              true
+            ],
+            [
+              "Geburtsort",
+              "Wien",
+              false
+            ],
+            [
+              "Staatsbürgerschaft",
+              "Österreichisch",
+              false
+            ],
+            [
+              "Staatsangehörigkeit des Vaters",
+              "Russisch",
+              true
+            ],
+            [
+              "Wohnort",
+              "Wien",
+              true
+            ]
+          ]
+        },
+        {
+          "heading": "II. Gewerbe und Legitimation",
+          "rows": [
+            [
+              "Buchhändlerlizenz",
+              "Vorhanden",
+              false
+            ],
+            [
+              "Hausierschein",
+              "Vorhanden",
+              true
+            ],
+            [
+              "Weitere Ausweispapiere",
+              "Vorhanden",
+              false
+            ]
+          ]
+        },
+        {
+          "heading": "III. Angaben zur Einreise",
+          "rows": [
+            [
+              "Grenzübertritt",
+              "Vor 23 Jahren",
+              false
+            ],
+            [
+              "Grund der Ausreise",
+              "Vermeidung des Militärdienstes",
+              true
+            ],
+            [
+              "Erwerb des österreichischen Bürgerrechts",
+              "Erfolgt",
+              false
+            ]
+          ]
+        },
+        {
+          "heading": "IV. Gegenstand des Verhörs",
+          "rows": [
+            [
+              "Briefverkehr",
+              "Frankreich und England",
+              true
+            ],
+            [
+              "Meldung als Ausländer",
+              "Erfolgt",
+              false
+            ],
+            [
+              "Lektüre von Tageszeitungen",
+              "Regelmäßig",
+              false
+            ]
+          ]
+        },
+        {
+          "heading": "V. Verfügung",
+          "rows": [
+            [
+              "Überstellung",
+              "Garnisonsgefängnis",
+              true
+            ],
+            [
+              "Weiterer Gewahrsam",
+              "Konzentrationslager",
+              true
+            ]
+          ]
+        }
+      ]
     }
 
     // Weitere Tage hier ergänzen.
