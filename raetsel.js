@@ -13,7 +13,7 @@ window.MENDEL = {
     subtitle: "Eine Erzählung",
     illustrations: "–",
     loans: [
-      { reader: "0204", group: "I", due: "30.11.1929" },
+      { reader: "3", group: "I", due: "30.11.1929" },
       { reader: "0403", group: "II", due: "30.11.2026" },
       { reader: "0304", group: "III", due: "24.12.2026" }
     ]
@@ -406,6 +406,61 @@ window.MENDEL = {
           ]
         }
       ]
+    },
+    17: {
+      title: "Die Briefe der Sammler",
+      page: "21",
+      answer: "DER HUND VON BASKERVILLE",
+      solution: "Der Hund von Baskerville",
+      fragment: null,
+      correspondence: {
+        "letters": [
+          {
+            "sender": "Edler v. Pisek",
+            "place": "Wien",
+            "salutation": "Wertester Herr Mendel!",
+            "body": [
+              "Bei der neuerlichen Durchsicht meiner Erinnerungen bin ich auf eine empfindliche Lücke gestoßen. Es fehlt mir eine ältere Schrift über die Geschichte unserer Kriegsmarine, deren Titel mir leider entfallen ist.",
+              "Darf ich Sie bitten, mir bei der Auffindung des Werkes behilflich zu sein? Auf Ihr außerordentliches Gedächtnis setze ich wie stets mein ganzes Vertrauen."
+            ],
+            "closing": "Mit vorzüglicher Hochachtung",
+            "signature": "Edler v. Pisek",
+            "role": "Flottenadmiral a. D."
+          },
+          {
+            "sender": "Graf Schönberg",
+            "place": "Graz",
+            "salutation": "Sehr geehrter Herr Mendel!",
+            "body": [
+              "Für meine Sammlung heraldischer Werke suche ich seit geraumer Zeit ein älteres Wappenbuch des steirischen Adels. Eine vollständige Ausgabe mit sämtlichen Tafeln wäre mir von besonderem Interesse.",
+              "Sollten Sie einem solchen Exemplar auf die Spur kommen, so bitte ich um gefällige Nachricht. Den Preis überlasse ich Ihrem Ermessen."
+            ],
+            "closing": "Mit verbindlichem Gruße",
+            "signature": "Graf Schönberg",
+            "role": "Statthalter a. D."
+          },
+          {
+            "sender": "",
+            "place": "Ohne Ortsangabe",
+            "salutation": "Werter Buchmendel!",
+            "body": [
+              "Auf diskretem Wege ersuche ich Sie um die Beschaffung jener Sherlock-Holmes-Romane, deren Besitz mir dieser Tage nicht gestattet ist. Insbesondere interessieren mich die folgenden vier Titel:"
+            ],
+            "closingBody": "Eines dieser Werke steht bei mir über allen anderen. Welche Stelle es in meiner Aufzählung einnimmt, mag Ihnen meine alte Entlehnungskarte verraten. Meinen Namen bitte ich nicht zu nennen.",
+            "closing": "In aller Verschwiegenheit",
+            "signature": "BN 3",
+            "role": ""
+          }
+        ],
+        "choices": [
+          "Eine Studie in Scharlachrot",
+          "Das Zeichen der Vier",
+          "Der Hund von Baskerville",
+          "Das Tal der Angst"
+        ],
+        "correctIndex": 2,
+        "question": "Welcher Titel hatte für den Sammler den größten Wert?"
+      }
     }
 
     // Weitere Tage hier ergänzen.
