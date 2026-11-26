@@ -56,12 +56,13 @@ function mount(root,config,options){
  const button=(text,label,cls="geo-control")=>{const b=node("button",cls,text);b.type="button";b.setAttribute("aria-label",label);return b;};
  const plus=button("+","Hineinzoomen"),minus=button("−","Herauszoomen"),home=button("Welt","Gesamte Welt anzeigen");
  controls.append(plus,minus,home);frame.append(controls);
- const hint=node("p","geo-hint","Setze den Pin so, dass die Universität im 100-km-Umkreis liegt.");
+ const hint=node("p","geo-hint",config.targetLabel ? "Setze den Pin so, dass "+config.targetLabel+" im "+radius+"-km-Umkreis liegt." : "Setze den Pin so, dass die Universität im "+radius+"-km-Umkreis liegt.");
+ const extraHint=config.hint?node("p","geo-hint",config.hint):null;
  const guide=node("p","geo-guide","Tippen / klicken: Pin setzen · Ziehen: Karte verschieben · + / −: Zoom");
  const lock=button("LOCK IN","Position bestätigen","geo-lock");lock.disabled=true;
  const status=node("p","geo-status");status.setAttribute("role","status");status.setAttribute("aria-live","polite");
  const source=node("p","geo-source","Kartendaten: Natural Earth");
- root.append(hint,frame,guide,lock,status,source);
+ root.append(hint);if(extraHint)root.append(extraHint);root.append(frame,guide,lock,status,source);
  let view={x:0,y:0,w:720},guess=null,reported=Boolean(options.completed),timer=null,disposed=false;
  const pointers=new Map();let gesture=null;
  function clearFeedback(){clearTimeout(timer);frame.classList.remove("geo-wrong","geo-correct");status.textContent="";}

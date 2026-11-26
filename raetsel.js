@@ -266,6 +266,34 @@ window.MENDEL = {
           ]
         ]
       }
+    },
+    12: {
+      title: "Ein Kopf ohne Welt",
+      page: "16",
+      answer: "BLENDUNG",
+      solution: "BLENDUNG",
+      fragment: null
+    },
+    13: {
+      title: "Eine Postkarte nach Paris",
+      page: "17",
+      answer: "LABOURDAIRE",
+      solution: "LABOURDAIRE",
+      fragment: null
+    },
+    14: {
+      title: "Finde Aldridge",
+      page: "18",
+      answer: "ALDRIDGE",
+      solution: "ALDRIDGE",
+      fragment: null,
+      geography: {
+        latitude: 52.60542,
+        longitude: -1.91722,
+        radiusKm: 100,
+        hint: "Tipp: GeoWizard wohnt dort.",
+        targetLabel: "Aldridge"
+      }
     }
 
     // Weitere Tage hier ergänzen.
