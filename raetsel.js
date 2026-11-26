@@ -158,6 +158,18 @@ window.MENDEL = {
       answer: "TODSÜNDEN",
       solution: "TODSÜNDEN",
       fragment: null
+    },
+    9: {
+      title: "Finde Princeton University",
+      page: "13",
+      answer: "PRINCETON",
+      solution: "Princeton University",
+      fragment: null,
+      geography: {
+        latitude: 40.34285,
+        longitude: -74.65682,
+        radiusKm: 100
+      }
     }
 
     // Weitere Tage hier ergänzen.
