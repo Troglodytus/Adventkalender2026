@@ -135,7 +135,7 @@ function mount(root,config,options){
   frame.classList.add(correct?"geo-correct":"geo-wrong");
   status.textContent=correct?"Richtig.":"Noch nicht ganz.";
   if(correct&&!reported){reported=true;options.onSolved();}
-  timer=setTimeout(()=>{if(!disposed)clearFeedback();},1500);
+  timer=setTimeout(()=>{if(!disposed)clearFeedback();},correct ? 6000 : 1500);
  };
  const observer=typeof ResizeObserver==="function"?new ResizeObserver(paint):null;
  if(observer)observer.observe(svg);paint();
