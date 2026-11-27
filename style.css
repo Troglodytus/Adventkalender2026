@@ -857,3 +857,19 @@ dialog::backdrop{
 .pi-fragment-label{font:.65rem Georgia,serif;letter-spacing:.13em}
 .pi-result strong{font:700 1.65rem Georgia,serif;letter-spacing:.12em}
 .pi-piece{font:italic .78rem Georgia,serif;margin:3px 0}
+
+/* Tag 19 – Café Gluck furniture sliding puzzle */
+#slider-puzzle{margin:12px auto 4px;max-width:510px}
+.sp-hint{margin:8px 0 13px;color:#625744;font:italic .9rem/1.45 Georgia,serif}
+.sp-frame{border:1px solid #a68b58;border-radius:4px;overflow:hidden;box-shadow:0 3px 12px #62492c44;transition:box-shadow .3s,border-color .3s}
+.sp-frame.sp-solved{border-color:#41654f;box-shadow:0 0 0 2px #41654f,0 0 18px 5px #41654f88}
+.sp-svg{display:block;width:100%;height:auto;touch-action:none;user-select:none;-webkit-user-select:none}
+.sp-furniture{cursor:grab;outline:none}
+.sp-furniture.sp-dragging{cursor:grabbing}
+.sp-furniture.sp-inactive{cursor:default}
+.sp-furniture:focus-visible{filter:drop-shadow(0 0 3px #315746)}
+.sp-status{margin:12px 0;color:#756754;font:italic .84rem/1.4 Georgia,serif}
+.sp-result{border:1px solid #41654f;background:#e2e9d9;padding:12px;color:#28503f;display:grid;gap:5px}
+.sp-label{font:.65rem Georgia,serif;letter-spacing:.13em}
+.sp-result strong{font:700 1.5rem Georgia,serif;letter-spacing:.1em}
+.sp-reset{margin-top:12px;border:1px solid #b09459;background:#fff9eb;color:#18372f;padding:9px 16px;font:.78rem system-ui,sans-serif;border-radius:3px;cursor:pointer}

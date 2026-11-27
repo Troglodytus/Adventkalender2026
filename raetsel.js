@@ -537,6 +537,116 @@ window.MENDEL = {
         "fragment": "MEMORIA",
         "piece": "Radetzkymarsch · Johann Strauss (Vater), op. 228"
       }
+    },
+    19: {
+      title: "Mendel wird vom Hausierer zum Straßierer",
+      page: "23",
+      answer: "KAFFEELOS",
+      solution: "KAFFEELOS",
+      fragment: null,
+      slider: {
+        "size": 6,
+        "exitRow": 2,
+        "fragment": "KAFFEELOS",
+        "pieces": [
+          {
+            "id": "mendel",
+            "x": 0,
+            "y": 2,
+            "len": 2,
+            "axis": "x",
+            "kind": "mendel"
+          },
+          {
+            "id": "p1",
+            "x": 4,
+            "y": 0,
+            "len": 2,
+            "axis": "x",
+            "kind": "table"
+          },
+          {
+            "id": "p2",
+            "x": 2,
+            "y": 3,
+            "len": 2,
+            "axis": "x",
+            "kind": "chair"
+          },
+          {
+            "id": "p3",
+            "x": 2,
+            "y": 1,
+            "len": 2,
+            "axis": "y",
+            "kind": "chair"
+          },
+          {
+            "id": "p4",
+            "x": 5,
+            "y": 2,
+            "len": 3,
+            "axis": "y",
+            "kind": "screen"
+          },
+          {
+            "id": "p5",
+            "x": 0,
+            "y": 0,
+            "len": 2,
+            "axis": "y",
+            "kind": "chair"
+          },
+          {
+            "id": "p6",
+            "x": 1,
+            "y": 0,
+            "len": 2,
+            "axis": "x",
+            "kind": "chair"
+          },
+          {
+            "id": "p7",
+            "x": 0,
+            "y": 4,
+            "len": 3,
+            "axis": "x",
+            "kind": "screen"
+          },
+          {
+            "id": "p8",
+            "x": 3,
+            "y": 1,
+            "len": 2,
+            "axis": "y",
+            "kind": "chair"
+          },
+          {
+            "id": "p9",
+            "x": 4,
+            "y": 3,
+            "len": 2,
+            "axis": "y",
+            "kind": "chair"
+          },
+          {
+            "id": "p10",
+            "x": 3,
+            "y": 4,
+            "len": 2,
+            "axis": "y",
+            "kind": "table"
+          },
+          {
+            "id": "p11",
+            "x": 4,
+            "y": 5,
+            "len": 2,
+            "axis": "x",
+            "kind": "chair"
+          }
+        ]
+      }
     }
 
     // Weitere Tage hier ergänzen.
