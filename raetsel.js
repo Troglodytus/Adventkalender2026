@@ -407,6 +407,16 @@ window.MENDEL = {
         }
       ]
     },
+    16: {
+      title: "In tausend Stücke",
+      page: "20",
+      answer: "MAGISCHES TELESKOP",
+      solution: "MAGISCHES TELESKOP",
+      fragment: null,
+      glasses: {
+        words: ["MAGISCHES", "TELESKOP"]
+      }
+    },
     17: {
       title: "Die Briefe der Sammler",
       page: "21",

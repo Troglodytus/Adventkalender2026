@@ -801,3 +801,23 @@ dialog::backdrop{
 .co-result{border:1px solid #41654f;background:#e2e9d9;color:#28503f;padding:12px;display:grid;gap:6px}
 .co-result-label{font:.65rem Georgia,serif;letter-spacing:.12em}
 .co-result strong{font:600 1.2rem/1.4 Georgia,serif}
+
+/* Mendel's broken spectacles – December 16 */
+#glasses-puzzle{margin:12px auto 4px;max-width:560px}
+.gl-hint{margin:8px 0 13px;color:#625744;font:italic .9rem/1.45 Georgia,serif}
+.gl-board{border:1px solid #a68b58;border-radius:4px;overflow:hidden;box-shadow:0 3px 12px #62492c44;transition:box-shadow .3s}
+.gl-board.gl-done{border-color:#41654f;box-shadow:0 0 18px 4px #41654f77}
+.gl-svg{width:100%;height:auto;display:block;touch-action:none;user-select:none;-webkit-user-select:none}
+.gl-piece{cursor:grab;outline:none}
+.gl-piece:active{cursor:grabbing}
+.gl-piece.gl-selected>path:first-child,.gl-piece:focus-visible>path:first-child{stroke:#a36c28;stroke-width:3}
+.gl-guide{font:.7rem/1.5 system-ui,sans-serif;color:#756754;margin:9px 0}
+.gl-controls{display:flex;justify-content:center;gap:12px;margin:9px 0}
+.gl-button,.gl-reset{border:1px solid #b09459;background:linear-gradient(#fff7e8,#e8d6ac);color:#18372f;padding:9px 16px;font:600 .85rem system-ui,sans-serif;border-radius:3px;cursor:pointer}
+.gl-button:disabled{opacity:.42;cursor:default}
+.gl-reset{font-weight:400;background:#fff9eb;margin-top:8px;font-size:.75rem}
+.gl-status,.gl-feedback{font:italic .84rem/1.4 Georgia,serif;color:#756754;margin:9px 0;min-height:1.2em}
+.gl-feedback{color:#8a3835}
+.gl-result{padding:12px;border:1px solid #41654f;background:#e2e9d9;color:#28503f;display:grid;gap:6px}
+.gl-fragment-label{font:.65rem Georgia,serif;letter-spacing:.13em}
+.gl-result strong{font:700 clamp(1.05rem,4vw,1.5rem) Georgia,serif;letter-spacing:.06em}

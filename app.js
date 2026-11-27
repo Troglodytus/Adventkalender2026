@@ -202,7 +202,8 @@
     $("crossword-puzzle").hidden = !puzzle?.crossword;
     $("protocol-puzzle").hidden = !puzzle?.protocol;
     $("correspondence-puzzle").hidden = !puzzle?.correspondence;
-    $("answer-form").hidden = !puzzle?.answer || !!puzzle?.chess || !!puzzle?.magnet || !!puzzle?.catalog || !!puzzle?.geography || !!puzzle?.crossword || !!puzzle?.protocol || !!puzzle?.correspondence;
+    $("glasses-puzzle").hidden = !puzzle?.glasses;
+    $("answer-form").hidden = !puzzle?.answer || !!puzzle?.chess || !!puzzle?.magnet || !!puzzle?.catalog || !!puzzle?.geography || !!puzzle?.crossword || !!puzzle?.protocol || !!puzzle?.correspondence || !!puzzle?.glasses;
     $("solution").hidden = true;
     $("solution-fragment").hidden = true;
     $("feedback").textContent = "";
@@ -211,14 +212,14 @@
     letters.className = "letters";
     letters.replaceChildren();
 
-    if (puzzle?.chess || puzzle?.magnet || puzzle?.catalog || puzzle?.geography || puzzle?.crossword || puzzle?.protocol || puzzle?.correspondence) {
+    if (puzzle?.chess || puzzle?.magnet || puzzle?.catalog || puzzle?.geography || puzzle?.crossword || puzzle?.protocol || puzzle?.correspondence || puzzle?.glasses) {
       const options = {
         completed: solved(day),
         onSolved: () => {
           if (active !== day) return;
           progress[day] = normalize(puzzle.answer);
           saveProgress();
-          if (puzzle.magnet || puzzle.catalog || puzzle.geography || puzzle.crossword || puzzle.protocol || puzzle.correspondence) { render(); return; }
+          if (puzzle.magnet || puzzle.catalog || puzzle.geography || puzzle.crossword || puzzle.protocol || puzzle.correspondence || puzzle.glasses) { render(); return; }
           $("solution-word").textContent = puzzle.answer;
           $("solution-text").textContent = puzzle.solution;
           $("solution-fragment").hidden = !puzzle.fragment;
@@ -239,7 +240,9 @@
                 ? window.MendelCrossword.mount($("crossword-puzzle"), puzzle.crossword, options)
                 : puzzle.protocol
                   ? window.MendelProtocol.mount($("protocol-puzzle"), puzzle.protocol, options)
-                  : window.MendelCorrespondence.mount($("correspondence-puzzle"), puzzle.correspondence, options);
+                  : puzzle.correspondence
+                    ? window.MendelCorrespondence.mount($("correspondence-puzzle"), puzzle.correspondence, options)
+                    : window.MendelGlasses.mount($("glasses-puzzle"), puzzle.glasses, options);
     } else if (puzzle?.answer) {
       const answer = normalize(puzzle.answer);
       const wordParts = String(puzzle.answer).trim().split(/\s+/).map(normalize).filter(Boolean);
