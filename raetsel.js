@@ -471,6 +471,72 @@ window.MENDEL = {
         "correctIndex": 2,
         "question": "Welcher Titel hatte für den Sammler den größten Wert?"
       }
+    },
+    18: {
+      title: "Die Klaviatur des Wissens",
+      page: "22",
+      answer: "MEMORIA",
+      solution: "MEMORIA",
+      fragment: null,
+      piano: {
+        "melody": [
+          78,
+          78,
+          77,
+          78,
+          78,
+          77,
+          78,
+          76,
+          74,
+          78,
+          77,
+          78,
+          78,
+          77,
+          78,
+          78,
+          77,
+          78,
+          81,
+          79,
+          79,
+          78
+        ],
+        "rhythm": [
+          2,
+          1,
+          1,
+          2,
+          1,
+          1,
+          2,
+          2,
+          2,
+          1,
+          1,
+          2,
+          1,
+          1,
+          2,
+          1,
+          1,
+          2,
+          2,
+          2,
+          1,
+          1
+        ],
+        "rounds": [
+          4,
+          6,
+          11,
+          17,
+          22
+        ],
+        "fragment": "MEMORIA",
+        "piece": "Radetzkymarsch · Johann Strauss (Vater), op. 228"
+      }
     }
 
     // Weitere Tage hier ergänzen.

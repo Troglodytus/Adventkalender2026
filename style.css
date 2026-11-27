@@ -821,3 +821,39 @@ dialog::backdrop{
 .gl-result{padding:12px;border:1px solid #41654f;background:#e2e9d9;color:#28503f;display:grid;gap:6px}
 .gl-fragment-label{font:.65rem Georgia,serif;letter-spacing:.13em}
 .gl-result strong{font:700 clamp(1.05rem,4vw,1.5rem) Georgia,serif;letter-spacing:.06em}
+
+/* Die Klaviatur des Wissens */
+#piano-puzzle{max-width:510px;margin:12px auto 4px}
+.pi-hint{margin:8px 0 15px;color:#625744;font:italic .9rem/1.45 Georgia,serif}
+.pi-instrument{position:relative;padding:12px 12px 15px;border:1px solid #39281d;border-radius:5px;background:repeating-linear-gradient(3deg,#ffffff06 0 1px,transparent 1px 5px),linear-gradient(105deg,#513321,#805333 38%,#4a2d20 72%,#36231a);box-shadow:0 6px 12px #50331b55,inset 0 0 0 3px #a37a4c55;transition:box-shadow .25s}
+.pi-plaque{margin:2px 0 8px;padding:12px 5px 13px;border:1px solid #a27a45;background:linear-gradient(#543526,#39251d);color:#e1c28a;display:grid;gap:4px;box-shadow:inset 0 1px 4px #271710}
+.pi-brand{font:italic 1.3rem Georgia,serif;letter-spacing:.04em}
+.pi-city{font:.6rem Georgia,serif;letter-spacing:.32em}
+.pi-keyboard{height:clamp(125px,43vw,216px);position:relative;background:#211610;border-top:6px solid #853d36;overflow:hidden;border-radius:0 0 2px 2px}
+.pi-key{position:absolute;top:0;padding:0;cursor:pointer;touch-action:manipulation;user-select:none;transition:background .08s,box-shadow .08s;outline:none}
+.pi-key:disabled{opacity:1;cursor:default}
+.pi-white{width:12.5%;height:100%;border:1px solid #746850;border-radius:0 0 4px 4px;background:linear-gradient(90deg,#d9ccb0,#fff9e8 12%,#f8f2de 86%,#d4c6a9);box-shadow:inset 0 -7px 0 #c6b99d,inset 0 -9px 0 #fff8df}
+.pi-black{width:7.5%;height:61%;transform:translateX(-50%);z-index:2;border:1px solid #16120d;border-radius:0 0 3px 3px;background:linear-gradient(90deg,#241e19,#514941 22%,#302923 75%,#15110e);box-shadow:inset 0 -6px 0 #171410,2px 4px 4px #1e160f66}
+.pi-white.pi-lit,.pi-white.pi-hit{background:linear-gradient(#e1e9be,#a9c698);box-shadow:inset 0 -7px 0 #829c74,0 0 12px #d5efbc}
+.pi-black.pi-lit,.pi-black.pi-hit{background:linear-gradient(#a8c294,#54754e);box-shadow:inset 0 -6px 0 #3f5e3a,0 0 10px #d5efbc}
+.pi-key.pi-error{background:#bd776c!important}
+.pi-key:focus-visible{outline:2px solid #d5ac55;outline-offset:-3px}
+.pi-instrument.pi-done{box-shadow:0 0 18px 4px #41654f99}
+.pi-instrument.pi-wrong{box-shadow:0 0 13px 3px #963d3466}
+.pi-rounds{display:flex;justify-content:center;gap:10px;margin:18px 0 11px}
+.pi-round{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;border:1px solid #b69a64;background:#e8d9b8;color:#8a7044;font:600 .79rem Georgia,serif}
+.pi-round.pi-current{border:2px solid #a1844d;background:#fff5da}
+.pi-round.pi-passed{border-color:#41654f;background:#41654f;color:#fff8df}
+.pi-status{min-height:2.6em;margin:8px 0;color:#625744;font:italic .9rem/1.4 Georgia,serif}
+.pi-notes{display:flex;justify-content:center;flex-wrap:wrap;gap:5px;max-width:400px;margin:0 auto 15px}
+.pi-note{width:9px;height:9px;border-radius:50%;border:1px solid #ac9365;background:#fff9ed}
+.pi-note.pi-note-filled{background:#41654f;border-color:#41654f}
+.pi-controls{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:7px}
+.pi-action,.pi-reset{border:1px solid #b09459;background:linear-gradient(#fff7e8,#e8d6ac);color:#18372f;padding:10px 12px;font:600 .77rem system-ui,sans-serif;border-radius:3px;cursor:pointer}
+.pi-action:disabled{opacity:.5;cursor:default}
+.pi-reset{font-weight:400;background:#fff9eb}
+.pi-help{font:.72rem/1.45 system-ui,sans-serif;color:#756754;margin:12px 0}
+.pi-result{border:1px solid #41654f;background:#e2e9d9;color:#28503f;padding:12px;display:grid;gap:5px}
+.pi-fragment-label{font:.65rem Georgia,serif;letter-spacing:.13em}
+.pi-result strong{font:700 1.65rem Georgia,serif;letter-spacing:.12em}
+.pi-piece{font:italic .78rem Georgia,serif;margin:3px 0}
