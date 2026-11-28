@@ -207,7 +207,9 @@
     $("slider-puzzle").hidden = !puzzle?.slider;
     $("differences-puzzle").hidden = !puzzle?.differences;
     $("memories-puzzle").hidden = !puzzle?.memories;
-    $("answer-form").hidden = !puzzle?.answer || !!puzzle?.chess || !!puzzle?.magnet || !!puzzle?.catalog || !!puzzle?.geography || !!puzzle?.crossword || !!puzzle?.protocol || !!puzzle?.correspondence || !!puzzle?.glasses || !!puzzle?.piano || !!puzzle?.slider || !!puzzle?.differences || !!puzzle?.memories;
+    $("dkt-puzzle").hidden = !puzzle?.dkt;
+    dialog.classList.toggle("dkt-full", !!puzzle?.dkt);
+    $("answer-form").hidden = !puzzle?.answer || !!puzzle?.chess || !!puzzle?.magnet || !!puzzle?.catalog || !!puzzle?.geography || !!puzzle?.crossword || !!puzzle?.protocol || !!puzzle?.correspondence || !!puzzle?.glasses || !!puzzle?.piano || !!puzzle?.slider || !!puzzle?.differences || !!puzzle?.memories || !!puzzle?.dkt;
     $("solution").hidden = true;
     $("solution-fragment").hidden = true;
     $("feedback").textContent = "";
@@ -216,14 +218,14 @@
     letters.className = "letters";
     letters.replaceChildren();
 
-    if (puzzle?.chess || puzzle?.magnet || puzzle?.catalog || puzzle?.geography || puzzle?.crossword || puzzle?.protocol || puzzle?.correspondence || puzzle?.glasses || puzzle?.piano || puzzle?.slider || puzzle?.differences || puzzle?.memories) {
+    if (puzzle?.chess || puzzle?.magnet || puzzle?.catalog || puzzle?.geography || puzzle?.crossword || puzzle?.protocol || puzzle?.correspondence || puzzle?.glasses || puzzle?.piano || puzzle?.slider || puzzle?.differences || puzzle?.memories || puzzle?.dkt) {
       const options = {
         completed: solved(day),
         onSolved: () => {
           if (active !== day) return;
           progress[day] = normalize(puzzle.answer);
           saveProgress();
-          if (puzzle.magnet || puzzle.catalog || puzzle.geography || puzzle.crossword || puzzle.protocol || puzzle.correspondence || puzzle.glasses || puzzle.piano || puzzle.slider || puzzle.differences || puzzle.memories) { render(); return; }
+          if (puzzle.magnet || puzzle.catalog || puzzle.geography || puzzle.crossword || puzzle.protocol || puzzle.correspondence || puzzle.glasses || puzzle.piano || puzzle.slider || puzzle.differences || puzzle.memories || puzzle.dkt) { render(); return; }
           $("solution-word").textContent = puzzle.answer;
           $("solution-text").textContent = puzzle.solution;
           $("solution-fragment").hidden = !puzzle.fragment;
@@ -254,7 +256,9 @@
                           ? window.MendelSlider.mount($("slider-puzzle"), puzzle.slider, options)
                           : puzzle.differences
                             ? window.MendelDifferences.mount($("differences-puzzle"), puzzle.differences, options)
-                            : window.MendelMemories.mount($("memories-puzzle"), puzzle.memories, options);
+                            : puzzle.memories
+                              ? window.MendelMemories.mount($("memories-puzzle"), puzzle.memories, options)
+                              : window.MendelDKT.mount($("dkt-puzzle"), window.MendelDKTData, {...options, storageKey: storageKey()+"-dkt"});
     } else if (puzzle?.answer) {
       const answer = normalize(puzzle.answer);
       const wordParts = String(puzzle.answer).trim().split(/\s+/).map(normalize).filter(Boolean);
@@ -412,6 +416,7 @@
 
   dialog.addEventListener("close", () => {
     if (stopInteractive) { stopInteractive(); stopInteractive = null; }
+    dialog.classList.remove("dkt-full");
     const button = calendar.querySelector(`[data-day="${active}"]`) || lastButton;
     button?.focus();
     active = null;

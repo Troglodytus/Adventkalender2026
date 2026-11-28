@@ -749,6 +749,13 @@ window.MENDEL = {
       answer: "LIEBE",
       solution: "LIEBE",
       fragment: null
+    },
+    23: {
+      title: "KaffeeDKT",
+      answer: "KAFFEEDKT",
+      solution: "KaffeeDKT",
+      fragment: null,
+      dkt: true
     }
 
     // Weitere Tage hier ergänzen.
