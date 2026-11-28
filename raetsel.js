@@ -647,6 +647,56 @@ window.MENDEL = {
           }
         ]
       }
+    },
+    20: {
+      title: "Der leere Tisch",
+      page: "24",
+      answer: "EINSAMKEIT",
+      solution: "EINSAMKEIT",
+      fragment: null,
+      differences: {
+        "images": [
+          "./assets/day20-before.svg",
+          "./assets/day20-after.svg"
+        ],
+        "labels": [
+          "Vorher",
+          "Nachher"
+        ],
+        "fragment": "EINSAMKEIT",
+        "spots": [
+          {
+            "x": 23,
+            "y": 22,
+            "rx": 9,
+            "ry": 12
+          },
+          {
+            "x": 76,
+            "y": 22,
+            "rx": 8,
+            "ry": 11
+          },
+          {
+            "x": 43,
+            "y": 58,
+            "rx": 14,
+            "ry": 10
+          },
+          {
+            "x": 70,
+            "y": 60,
+            "rx": 8,
+            "ry": 9
+          },
+          {
+            "x": 81,
+            "y": 85,
+            "rx": 9,
+            "ry": 10
+          }
+        ]
+      }
     }
 
     // Weitere Tage hier ergänzen.

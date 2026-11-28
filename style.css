@@ -873,3 +873,24 @@ dialog::backdrop{
 .sp-label{font:.65rem Georgia,serif;letter-spacing:.13em}
 .sp-result strong{font:700 1.5rem Georgia,serif;letter-spacing:.1em}
 .sp-reset{margin-top:12px;border:1px solid #b09459;background:#fff9eb;color:#18372f;padding:9px 16px;font:.78rem system-ui,sans-serif;border-radius:3px;cursor:pointer}
+
+/* Tag 20 – two interchangeable images with percentage-based hotspots */
+#differences-puzzle{margin:12px auto 4px;max-width:510px}
+.df-hint{margin:8px 0 14px;color:#625744;font:italic .9rem/1.45 Georgia,serif}
+.df-board{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;padding:6px;border:1px solid #b69a64;border-radius:4px;background:#eaddbc;transition:box-shadow .3s,border-color .3s}
+.df-board.df-solved{border-color:#41654f;box-shadow:0 0 0 2px #41654f,0 0 18px 4px #41654f77}
+.df-panel{min-width:0;margin:0}
+.df-caption{font:.76rem Georgia,serif;color:#79643c;letter-spacing:.08em;padding:5px 0 8px}
+.df-picture{position:relative;cursor:crosshair;touch-action:manipulation;user-select:none;overflow:hidden;border:1px solid #957b53}
+.df-image{display:block;width:100%;height:auto;margin:0;pointer-events:none}
+.df-overlay{position:absolute;inset:0;pointer-events:none}
+.df-mark,.df-miss{position:absolute;transform:translate(-50%,-50%);border-radius:50%;box-sizing:border-box}
+.df-mark{border:2px solid #396b48;background:#6fb66a18;box-shadow:0 0 0 1px #fff9e6,0 0 5px #254c36}
+.df-miss{width:14px;height:14px;border:2px solid #a34a3d;box-shadow:0 0 0 1px #fff9e6}
+.df-status,.df-feedback{font:italic .85rem/1.4 Georgia,serif;color:#756754;margin:10px 0;min-height:1.2em}
+.df-feedback{font-size:.77rem}
+.df-result{border:1px solid #41654f;background:#e2e9d9;padding:12px;color:#28503f;display:grid;gap:5px}
+.df-label{font:.65rem Georgia,serif;letter-spacing:.13em}
+.df-result strong{font:700 1.5rem Georgia,serif;letter-spacing:.1em}
+.df-reset{margin-top:12px;border:1px solid #b09459;background:#fff9eb;color:#18372f;padding:9px 16px;font:.78rem system-ui,sans-serif;border-radius:3px;cursor:pointer}
+@media(max-width:480px){.df-board{grid-template-columns:1fr;gap:5px}.df-panel{max-width:100%;width:100%}}
