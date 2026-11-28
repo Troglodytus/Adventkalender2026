@@ -894,3 +894,28 @@ dialog::backdrop{
 .df-result strong{font:700 1.5rem Georgia,serif;letter-spacing:.1em}
 .df-reset{margin-top:12px;border:1px solid #b09459;background:#fff9eb;color:#18372f;padding:9px 16px;font:.78rem system-ui,sans-serif;border-radius:3px;cursor:pointer}
 @media(max-width:480px){.df-board{grid-template-columns:1fr;gap:5px}.df-panel{max-width:100%;width:100%}}
+
+/* Tag 21 – Erinnerungsalbum */
+#memories-puzzle{margin:12px auto 4px;max-width:510px}
+.mm-hint{margin:8px 0 15px;color:#625744;font:italic .9rem/1.45 Georgia,serif}
+.mm-album{display:grid;gap:12px;padding:10px;border:1px solid #b69a64;background:linear-gradient(115deg,#e9d8b2,#f4e9cd);border-radius:4px;transition:box-shadow .3s}
+.mm-album.mm-solved{border-color:#41654f;box-shadow:0 0 0 2px #41654f,0 0 18px 4px #41654f77}
+.mm-row{display:grid;grid-template-columns:minmax(0,43%) minmax(0,1fr);align-items:center;gap:11px;padding:7px;background:#fcf4df;border:1px solid #c9b78f;border-radius:2px;text-align:left}
+.mm-photo{background:#fffaf0;padding:4px 4px 9px;border:1px solid #c4af86;box-shadow:1px 2px 4px #62492c33;transform:rotate(-1deg)}
+.mm-row:nth-child(even) .mm-photo{transform:rotate(1deg)}
+.mm-img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.mm-fields{min-width:0;display:grid;gap:7px}
+.mm-label{font:.65rem Georgia,serif;letter-spacing:.13em;color:#79643c}
+.mm-form{display:flex;flex-wrap:wrap;gap:5px}
+.mm-input{flex:1 1 95px;min-width:0;max-width:100%;box-sizing:border-box;padding:9px 7px;border:1px solid #b69a64;background:#fffaf0;border-radius:2px;color:#514636;font:.86rem Georgia,serif}
+.mm-check,.mm-reset{border:1px solid #b09459;background:#f3e5c4;color:#18372f;padding:8px 10px;font:.73rem system-ui,sans-serif;border-radius:3px;cursor:pointer}
+.mm-check:disabled{background:#41654f;border-color:#41654f;color:white;cursor:default}
+.mm-feedback{font:italic .72rem Georgia,serif;color:#8a3835;min-height:1em}
+.mm-row.mm-correct{border-color:#41654f;background:#eef0df}
+.mm-correct .mm-feedback{color:#315746}
+.mm-wrong .mm-input{border-color:#963d34;box-shadow:0 0 6px #963d344d}
+.mm-status{font:italic .85rem Georgia,serif;color:#756754;margin:12px 0}
+.mm-result{border:1px solid #41654f;background:#e2e9d9;padding:12px;color:#28503f;display:grid;gap:5px}
+.mm-result strong{font:700 1.5rem Georgia,serif;letter-spacing:.1em}
+.mm-reset{margin-top:12px;background:#fff9eb}
+@media(max-width:390px){.mm-row{gap:7px;padding:5px}.mm-input{font-size:.8rem}.mm-album{padding:6px}}

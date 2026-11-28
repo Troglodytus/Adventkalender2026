@@ -697,6 +697,58 @@ window.MENDEL = {
           }
         ]
       }
+    },
+    21: {
+      title: "Erinnerung ist Liebe",
+      page: "25",
+      answer: "VERBUNDEN",
+      solution: "VERBUNDEN",
+      fragment: null,
+      memories: {
+        "fragment": "VERBUNDEN",
+        "pictures": [
+          {
+            "image": "./assets/day21-01.svg",
+            "answer": "Paris"
+          },
+          {
+            "image": "./assets/day21-02.svg",
+            "answer": "Rom",
+            "aliases": [
+              "Rome",
+              "Roma"
+            ]
+          },
+          {
+            "image": "./assets/day21-03.svg",
+            "answer": "Wien",
+            "aliases": [
+              "Vienna"
+            ]
+          },
+          {
+            "image": "./assets/day21-04.svg",
+            "answer": "Venedig",
+            "aliases": [
+              "Venice",
+              "Venezia"
+            ]
+          },
+          {
+            "image": "./assets/day21-05.svg",
+            "answer": "Pisa"
+          }
+        ]
+      }
+    },
+    22: {
+      title: "Erotica et Curiosa",
+      page: "26",
+      image: "./assets/day22-cipher.svg",
+      imageAlt: "Pagina · Linea · Littera",
+      answer: "LIEBE",
+      solution: "LIEBE",
+      fragment: null
     }
 
     // Weitere Tage hier ergänzen.

@@ -206,7 +206,8 @@
     $("piano-puzzle").hidden = !puzzle?.piano;
     $("slider-puzzle").hidden = !puzzle?.slider;
     $("differences-puzzle").hidden = !puzzle?.differences;
-    $("answer-form").hidden = !puzzle?.answer || !!puzzle?.chess || !!puzzle?.magnet || !!puzzle?.catalog || !!puzzle?.geography || !!puzzle?.crossword || !!puzzle?.protocol || !!puzzle?.correspondence || !!puzzle?.glasses || !!puzzle?.piano || !!puzzle?.slider || !!puzzle?.differences;
+    $("memories-puzzle").hidden = !puzzle?.memories;
+    $("answer-form").hidden = !puzzle?.answer || !!puzzle?.chess || !!puzzle?.magnet || !!puzzle?.catalog || !!puzzle?.geography || !!puzzle?.crossword || !!puzzle?.protocol || !!puzzle?.correspondence || !!puzzle?.glasses || !!puzzle?.piano || !!puzzle?.slider || !!puzzle?.differences || !!puzzle?.memories;
     $("solution").hidden = true;
     $("solution-fragment").hidden = true;
     $("feedback").textContent = "";
@@ -215,14 +216,14 @@
     letters.className = "letters";
     letters.replaceChildren();
 
-    if (puzzle?.chess || puzzle?.magnet || puzzle?.catalog || puzzle?.geography || puzzle?.crossword || puzzle?.protocol || puzzle?.correspondence || puzzle?.glasses || puzzle?.piano || puzzle?.slider || puzzle?.differences) {
+    if (puzzle?.chess || puzzle?.magnet || puzzle?.catalog || puzzle?.geography || puzzle?.crossword || puzzle?.protocol || puzzle?.correspondence || puzzle?.glasses || puzzle?.piano || puzzle?.slider || puzzle?.differences || puzzle?.memories) {
       const options = {
         completed: solved(day),
         onSolved: () => {
           if (active !== day) return;
           progress[day] = normalize(puzzle.answer);
           saveProgress();
-          if (puzzle.magnet || puzzle.catalog || puzzle.geography || puzzle.crossword || puzzle.protocol || puzzle.correspondence || puzzle.glasses || puzzle.piano || puzzle.slider || puzzle.differences) { render(); return; }
+          if (puzzle.magnet || puzzle.catalog || puzzle.geography || puzzle.crossword || puzzle.protocol || puzzle.correspondence || puzzle.glasses || puzzle.piano || puzzle.slider || puzzle.differences || puzzle.memories) { render(); return; }
           $("solution-word").textContent = puzzle.answer;
           $("solution-text").textContent = puzzle.solution;
           $("solution-fragment").hidden = !puzzle.fragment;
@@ -251,7 +252,9 @@
                         ? window.MendelPiano.mount($("piano-puzzle"), puzzle.piano, options)
                         : puzzle.slider
                           ? window.MendelSlider.mount($("slider-puzzle"), puzzle.slider, options)
-                          : window.MendelDifferences.mount($("differences-puzzle"), puzzle.differences, options);
+                          : puzzle.differences
+                            ? window.MendelDifferences.mount($("differences-puzzle"), puzzle.differences, options)
+                            : window.MendelMemories.mount($("memories-puzzle"), puzzle.memories, options);
     } else if (puzzle?.answer) {
       const answer = normalize(puzzle.answer);
       const wordParts = String(puzzle.answer).trim().split(/\s+/).map(normalize).filter(Boolean);
