@@ -744,8 +744,8 @@ window.MENDEL = {
     22: {
       title: "Erotica et Curiosa",
       page: "26",
-      image: "./assets/day22-cipher.svg",
-      imageAlt: "Pagina · Linea · Littera",
+      image: "./assets/day22-cipher.svg?v=2",
+      imageAlt: "Pagina · Linea · Verbum",
       answer: "LIEBE",
       solution: "LIEBE",
       fragment: null
